@@ -1,6 +1,8 @@
 import Layout from '../../components/layout';
+import Date from '../../components/date';
 import { getAllPostsIds, getPostData } from '../../lib/posts';
 import Head from 'next/head';
+import utilStyles from '../../styles/utils.module.css';
 
 export async function getStaticPaths() {
   const paths = getAllPostsIds();
@@ -27,13 +29,14 @@ export default function Post({ postData }) {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <br />
-      {postData.id}
-      <br />
-      {postData.date}
-      <br />
-      {/* This is React's replacement for using innerHTML in the browser DOM */}
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      <article>
+        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
+        <div className={utilStyles.lightText}>
+          <Date dateString={postData.date} />
+        </div>
+        {/* This is React's replacement for using innerHTML in the browser DOM */}
+        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      </article>
     </Layout>
   );
 }
