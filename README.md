@@ -4,7 +4,7 @@ Project to create a test blog site using NextJS
 
 **🔗 Live preview:** https://crystaltai-nextjs-blog.vercel.app/
 
-![](https://github.com/crystaltai/nextjs-blog/blob/main/demo/nextjs-blog-demo.gif)
+![](https://github.com/crystaltai/nextjs-blog/blob/main/demo/nextjs-blog-demo.png?raw=true)
 
 ## Run the project
 
