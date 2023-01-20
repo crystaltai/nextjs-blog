@@ -9,7 +9,7 @@ export async function getStaticPaths() {
 
   return {
     paths, // Contains the array of known paths, which include the params defined by pages/posts/[id].js
-    fallback: false,
+    fallback: false, // If false, wrong paths result in 404 page
   };
 }
 
